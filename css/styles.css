@@ -20,3 +20,26 @@
 #meme {
   width: 100%;
 }
+
+.upper {
+  background-color: #AC7088;
+  padding-bottom: 3px;
+  text-align: center;
+}
+
+h1 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+h4 {
+  margin-top: 20px;
+}
+
+body {
+  background-color: #FEFBF6;
+}
+
+button {
+  margin-top: 30px;
+}
