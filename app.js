@@ -61,7 +61,6 @@ function download() {
   const imageLink = document.createElement('a');
   imageLink.download = 'meme.png';
   imageLink.href = canvas.toDataURL('image/png', 1);
-  // document.write('<img src=" '+imageLink+' "/>');
-  // console.log(imageLink.href);
+
   imageLink.click();
 }
