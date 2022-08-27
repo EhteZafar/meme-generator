@@ -3,7 +3,7 @@ const topLine = document.querySelector("#topLine");
 const bottomLine = document.querySelector("#bottomLine");
 const canvas = document.querySelector("#meme");
 
-let image
+let image;
 
 imageFile.addEventListener("change", () => {
   const imgURL = URL.createObjectURL(imageFile.files[0]);
@@ -27,7 +27,6 @@ bottomLine.addEventListener("change", () => {
 });
 
 function updateCanvas(canvas, image, topText, bottomText) {
-  document.getElementById("heading").innerHTML = "MEME";
   const dis = canvas.getContext("2d");
   const width = image.width;
   const height = image.height;
@@ -53,5 +52,16 @@ function updateCanvas(canvas, image, topText, bottomText) {
   dis.strokeText(bottomText, width / 2,height - yOffSet);
   dis.fillText(bottomText, width/2,height - yOffSet);
 
+  document.getElementById("heading").innerHTML = "MEME";
+  document.getElementById("download").innerHTML = "Download";
 
+}
+
+function download() {
+  const imageLink = document.createElement('a');
+  imageLink.download = 'meme.png';
+  imageLink.href = canvas.toDataURL('image/png', 1);
+  // document.write('<img src=" '+imageLink+' "/>');
+  // console.log(imageLink.href);
+  imageLink.click();
 }
